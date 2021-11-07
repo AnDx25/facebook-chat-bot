@@ -8,7 +8,18 @@ const
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
-
+app.get('/',(req,res)=>{
+    res.send(`
+    <html>
+    <head>
+     <title>Edulect</title>
+    </head>
+    <body>
+     <h1 style="color:green">Welcome To Edulect</h1>
+    </body>
+ </html>
+    `)
+})
 // Creates the endpoint for our webhook 
 app.post('/webhook', (req, res) => {  
  
